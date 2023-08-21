@@ -1,0 +1,2 @@
+centos 7 ami -- ami-002070d43b0a4f171
+ubuntu 20 ami -- ami-0261755bbcb8c4a84
