@@ -1,0 +1,34 @@
+Vagrant.configure("2") do |config|
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    #######Jenkins VM######
+    config.vm.define "jnknserver" do |jnknserver|
+            jnknserver.vm.box = "ubuntu/focal64"
+            jnknserver.vm.boot_timeout = 600
+            jnknserver.vm.hostname = "jnkn01"
+            jnknserver.vm.network "private_network", ip: "192.168.32.99"
+            jnknserver.vm.provider "virtualbox" do |vb|
+                    vb.memory = "1600"
+            end
+            jnknserver.vm.provision "shell", path: "jenkins-setup.sh"
+    end
+    config.vm.define "sonar" do |sonar|
+        sonar.vm.box = "ubuntu/focal64"
+        sonar.vm.boot_timeout = 600
+        sonar.vm.hostname = "jnkn01"
+        sonar.vm.network "private_network", ip: "192.168.33.99"
+        sonar.vm.provider "virtualbox" do |vb|
+                vb.memory = "1500"
+            end
+        sonar.vm.provision "shell", path: "sonar-setup.sh"
+    end
+config.vm.define "nexus" do |nexus|
+    nexus.vm.box = "geerlingguy/centos7"
+    nexus.vm.hostname = "nex01"
+    nexus.vm.network "private_network", ip: "192.168.34.99"
+    nexus.vm.provider "virtualbox" do |vb|
+            vb.memory = "1024"
+        end
+    nexus.vm.provision "shell", path: "nexus_repo.sh"
+    end
+end
