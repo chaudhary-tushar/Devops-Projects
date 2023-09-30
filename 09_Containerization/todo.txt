@@ -1,0 +1,3 @@
+edit application.properties
+copy edited target **.war file
+run and commit

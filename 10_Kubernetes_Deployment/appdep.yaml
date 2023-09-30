@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vproapp
+  labels:
+    app: vproapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vproapp
+  template:
+    metadata:
+      labels:
+        app: vproapp
+    spec:
+      containers:
+      - name: vproapp
+        image: romeo7/vprofileapp:v1
+        resources:
+          limits:
+            cpu: "4"
+            memory: "2048Mi"
+          requests:
+            cpu: "2"
+            memory: "512Mi"
+        ports:
+          - name: vproapp-port
+            containerPort: 8080
+      initContainer:
+        - name: init-mydb
+          image: busybox
+          command: ['sh','-c','until nslookup vprodb; do echo waiting for mydb; sleep 2; done;']
+        - name: init-memcache
+          image: busybox
+          command: ['sh','-c','until nslookup vpromc01; do echo waiting for mydb; sleep 2; done;']
