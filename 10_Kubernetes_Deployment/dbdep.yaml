@@ -2,42 +2,35 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vprodb
-  label:
+  labels:
     app: vprodb
 spec:
   selector:
     matchLabels:
       app: vprodb
-    replicas: 1
+  replicas: 1
   template:
     metadata:
       labels:
         app: vprodb
     spec:
       containers:
-      - name: vprodb
-        image: romeo7/vprodb:v1
-        volumeMounts:
-          - mountPath: /var/lib/mysql
-            name: vpro-db-data
-        resources:
-          limits:
-            cpu: "1"
-            memory: "512Mi"
-          requests:
-            cpu: "0.5"
-            memory: "256Mi"
-        ports:
-          - name: vprodb-port
-            containerPort: 3306
-        env:
-          - name: MYSQL_DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: app-secret
-                key: db-pass
+        - name: vprodb
+          image: romeo7/vprodb:v1
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: vpro-db-data
+          ports:
+            - name: vprodb-port
+              containerPort: 3306
+          env:
+            - name: MYSQL_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: db-pass
       volumes:
       - name: vpro-db-data
         hostPath:
-          path: D:\\Devops-Projects\\10_Kubernetes_Deployment\\vol
+          path: /data1
           type: Directory
