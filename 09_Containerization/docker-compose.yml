@@ -32,7 +32,12 @@ services:
   vproweb:
     image: romeo7/vproweb:v1 # build image
     ports:
-      - "81:80"
+      - "80:80"
+    depends_on:
+      - vproapp
+    links:
+      - vproapp
+    
 
 volumes:
   vprodbdata: {}
