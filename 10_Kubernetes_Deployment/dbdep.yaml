@@ -17,6 +17,10 @@ spec:
       containers:
         - name: vprodb
           image: romeo7/vprodb:v1
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vpro-db-data

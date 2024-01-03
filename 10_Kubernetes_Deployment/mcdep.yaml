@@ -17,6 +17,10 @@ spec:
       containers:
       - name: vpromc
         image: memcached
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
         ports:
           - name: vpromc-port
             containerPort: 11211

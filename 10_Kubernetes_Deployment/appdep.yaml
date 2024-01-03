@@ -5,7 +5,7 @@ metadata:
   labels:
     app: vproapp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: vproapp
@@ -17,13 +17,11 @@ spec:
       containers:
         - name: vproapp
           image: romeo7/vproapp:v1
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
           ports:
             - name: vproapp-port
               containerPort: 8080
-      # initContainers:
-      #   - name: init-mydb
-      #     image: busybox
-      #     command: ['sh','-c','until nslookup vprodb; do echo waiting for mydb; sleep 2; done;']
-      #   - name: init-memcache
-      #     image: busybox
-      #     command: ['sh','-c','until nslookup vpromc01; do echo waiting for mydb; sleep 2; done;']
+
