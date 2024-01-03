@@ -27,4 +27,5 @@ TestResults.xml
 */*.pem
 */vprofilekey
 */*.pub
+*/repokey
 
