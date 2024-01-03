@@ -22,3 +22,9 @@ rad.json
 TestResults.xml
 #Terraform init directory
 */.terraform/
+
+#Keys
+*/*.pem
+*/vprofilekey
+*/*.pub
+
