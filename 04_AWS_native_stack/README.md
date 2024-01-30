@@ -11,7 +11,12 @@ This creates the stack reqiured for setting up the java project on the AWS Beans
 
 ### System Design
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](beanstalk-terraform.png)
+
+
+### Terraform IAAC
+
+![App Screenshot](beanstalk-stack-terraform.png)
 
 
 
