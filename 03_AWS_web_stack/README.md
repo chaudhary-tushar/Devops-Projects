@@ -10,7 +10,7 @@ This creates the stack reqiured for setting up the java project on the AWS EC2 i
 
 ### System Design
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](02_Automated_web_stack/manual_stack.png)
 
 
 
