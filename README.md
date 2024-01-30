@@ -24,24 +24,24 @@ The knowledge about the following Tools are required in the Projects:-
 #### Login 
 This page checks for the credentials in the mysqldb.
 Default user_name and password are "admin_vp".
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](00_core_java/docs/login.png)
 
 #### Profile 
 This page comes after logging in and consists of button for checking connectivity and functioning of Memcache, RabbitMQ and Elasticsearch.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here) 
+![App Screenshot](00_core_java/docs/profile.png) 
 
 #### Users
 By clicking on this button, you will redirected to a list of users. On clicking any user_id for he first time it wiil be loaded from the database into Cache and it will say so on the page, And on clicking the same user again it's details will be loaded from cache.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](00_core_java/docs/dbcache.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](00_core_java/docs/from cache.png)
 
 #### RabbitMQ
 This button will check the connectivity and functionality of the RabbitMQ service.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](00_core_java/docs/rmq.png)
 
 
 
