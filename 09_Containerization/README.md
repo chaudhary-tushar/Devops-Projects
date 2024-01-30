@@ -15,7 +15,7 @@ This Repo Contains the Java Project divided into 3 parts:-
 
 ### System Design
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](containerization.png)
 
 
 
