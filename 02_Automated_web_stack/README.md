@@ -10,7 +10,7 @@ This is an Automated process and requires 5 Machines to be created in the hyperv
 
 ### System Design
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](manual_stack.png)
 
 
 
