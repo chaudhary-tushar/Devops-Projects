@@ -36,7 +36,7 @@ By clicking on this button, you will redirected to a list of users. On clicking 
 
 ![App Screenshot](00_core_java/docs/dbcache.png)
 
-![App Screenshot](00_core_java/docs/from cache.png)
+![App Screenshot](00_core_java/docs/from_cache.png)
 
 #### RabbitMQ
 This button will check the connectivity and functionality of the RabbitMQ service.
